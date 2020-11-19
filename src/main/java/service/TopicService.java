@@ -10,6 +10,21 @@ import java.util.List;
 public class TopicService {
     private final SessionFactory factory= HibernateUtils.getSessionFactory();
     private final Session session=factory.getCurrentSession();
+    public List<Topic> getAllByCategories(int id){
+        List<Topic> list=List.of();
+        try {
+            session.getTransaction().begin();
+            String hql="From Topic As t where t.categories.id=:id";
+            list=session.createQuery(hql,Topic.class).list();
+            session.getTransaction().commit();
+
+        }
+        catch (Exception e){
+            session.getTransaction().rollback();
+        }
+        return list;
+    }
+
     public List<Topic> getAll(){
         List<Topic> list=List.of();
         try {
