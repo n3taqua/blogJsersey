@@ -21,6 +21,9 @@
         <property name="generate_statistics">true</property>
 
         <!-- mapping files -->
+        <mapping class="model.User" />
+        <mapping class="model.Topic" />
+        <mapping class="model.Categories" />
         <!-- cache settings -->
 
     </session-factory>

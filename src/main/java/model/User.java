@@ -19,6 +19,6 @@ public class User {
     private int id;
     @Column(columnDefinition = "varchar(45)")
     private String username;
-    @Column(columnDefinition = "varchar128")
+    @Column(columnDefinition = "varchar(128)")
     private String password;
 }
