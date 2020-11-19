@@ -10,11 +10,15 @@ repositories {
 }
 
 dependencies {
-    testCompile 'com.sun.jersey:jersey-client:2.32'
-    compile 'com.sun.jersey:jersey-core:2.32'
-    compile 'com.sun.jersey:jersey-server:2.32'
-    compile 'com.sun.jersey:jersey-servlet:2.32'
-    compile 'com.sun.jersey:jersey-json:2.32'
+    testCompile 'com.sun.jersey:jersey-client:2.6'
+
+
+    compile "org.glassfish.jersey.core:jersey-server:2.32"
+    compile "org.glassfish.jersey.containers:jersey-container-servlet:2.32"
+    compile "org.glassfish.jersey.inject:jersey-hk2:2.32"
+    compile "org.glassfish.jersey.core:jersey-client:2.32"
+    compile "org.glassfish.jersey.core:jersey-common:2.32"
+    compile "org.glassfish.jersey.media:jersey-media-json-jackson:2.32"
 
 
     compile 'io.jsonwebtoken:jjwt-api:0.10.5'
